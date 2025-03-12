@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Fotografía</title>
+</head>
+<body>
+    <h2>Formulario para Generar PDF con Foto</h2>
+    <form id="formulario" method="POST" action="procesar.php" enctype="multipart/form-data">
+        <label for="opciones">Selecciona una opción:</label>
+        <select name="opcion" id="opciones" required>
+            <option value="TENDENZZA">TENDENZZA</option>
+            <option value="DURENTTO">DURENTTO</option>
+            <option value="ENERGIA">ENERGIA</option>
+        </select>
+        <br><br>
+        <label for="numero_oc">Número de OC:</label>
+        <input type="text" id="numero_oc" name="numero_oc" required>
+        <br><br>
+        <label for="nombre_doc">Nombre del Documento:</label>
+        <input type="text" id="nombre_doc" name="nombre_doc" required>
+        <br><br>
+        <label for="foto">Tomar Fotografía:</label>
+        <input type="file" accept="image/*" capture="environment" id="foto" name="foto" required>
+        <br><br>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
